@@ -1,0 +1,19 @@
+<button type="button" class="btn btn-info" [routerLink]="['/resturants/new']">New resturant</button>
+
+
+<table border="1" class="table">
+  <tr>
+    <td><h2>Resturant</h2></td>
+    <td><h2>Cuisine</h2></td>
+    <td><h2>Actions Available</h2></td>
+  </tr>
+  <tr *ngFor='let resturant of resturants'>
+    <td><h3 style="color:#f2f2f2">{{ resturant.name }}</h3></td>
+    <td><h3 style="color:#f2f2f2">{{ resturant.cuisine }}</h3></td>
+    <td>
+      <button type="button" class="btn btn-info" [routerLink]="['/resturants/' + resturant._id]">Review</button>
+      <button type="button" class="btn btn-info" [routerLink]="['/resturants/' + resturant._id + '/edit']">Edit</button>
+      <button type="button" class="btn btn-danger" (click)="deleteResturant(resturant._id)">Delete</button>
+    </td>
+  </tr>
+</table>

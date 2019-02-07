@@ -1,0 +1,16 @@
+<button class="btn btn-info" [routerLink]="['/resturants/' + id + '/review']">New Review</button>
+<button class="btn btn-danger" [routerLink]="['/']">Go Back</button>
+
+<table border="1" class="table">
+  <tr>
+    <td><h2>Resturant</h2></td>
+    <td><h2>Cuisine</h2></td>
+    <td><h2>Review</h2></td>
+  </tr>
+  <tr *ngFor='let review of reviews'>
+    <td><h3 style="color:#f2f2f2">{{ review.name }}</h3></td>
+    <td><h3 style="color:#f2f2f2">{{ review.star }}</h3></td>
+    <td><h3 style="color:#f2f2f2">{{ review.review }}</h3></td>
+  </tr>
+</table>
+

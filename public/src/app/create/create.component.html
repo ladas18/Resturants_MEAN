@@ -1,0 +1,17 @@
+<h4>Register a resturant</h4>
+<form>
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)] = "newrest.name"/>
+  </div>
+  <div class="form-group">
+    <label>Cuisine:</label>
+    <input type="text" name="cuisine" [(ngModel)] = "newrest.cuisine"/>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-info" (click)="addResturant($event)">Submit</button>
+    <button class="btn btn-danger" [routerLink]="['/']">Cancel</button>
+  </div>
+</form>
+<div ng-if="error">{{ error.name.message }}</div>
+<div ng-if="error">{{ error.cuisine.message }}</div>

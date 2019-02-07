@@ -1,0 +1,16 @@
+<h4>Edit a resturant:</h4>
+<form>
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" [(ngModel)] = "updateRest.name" value="{{updateRest.name}}" name="name" />
+  </div>
+  <div class="form-group">
+    <label>Cuisine:</label>
+    <input type="text" [(ngModel)] = "updateRest.cuisine" value="{{updateRest.cuisine}}" name="cuisine" />
+  </div>
+  <div class="form-group">
+      <button class="btn btn-danger" [routerLink]= "['/']" >Cancel</button>
+    <button class="btn btn-info" (click)="editResturant(updateRest, $event)">Edit</button>
+  </div>
+</form>
+

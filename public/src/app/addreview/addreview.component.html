@@ -1,0 +1,21 @@
+<h4>Write a review</h4>
+<form>
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)] = "newReview.name"/>
+  </div>
+  <div class="form-group">
+    <label>Rating:</label>
+    <input type="number" name="star" min="1" max="5" [(ngModel)] = "newReview.star"/>
+  </div>
+  <div class="form-group">
+    <label>Review:</label>
+    <input type="text" name="review" [(ngModel)] = "newReview.review"/>
+  </div>
+  <div class="form-group">
+    <input class="btn btn-info" type="submit" value="Submit" (click) = "addReview(newReview)"/>
+    <button class="btn btn-danger" [routerLink]="['/']">Cancel</button>
+  </div>
+</form>
+
+{{error}}
